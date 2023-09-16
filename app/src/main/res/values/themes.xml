@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Practica05RodriguezSalazarHectorMauricio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Practica05RodriguezSalazarHectorMauricio" parent="Base.Theme.Practica05RodriguezSalazarHectorMauricio" />
+
+    <style name="chopSel" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor" >#FF4500</item>
+        <item name="chipStrokeColor">#95a5a6</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+</resources>

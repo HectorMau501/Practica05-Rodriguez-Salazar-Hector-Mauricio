@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:onClick="OnClick"
+        android:src="@drawable/baseline_delete_forever_24"
+        app:backgroundTint="#FF0000"
+        app:layout_constraintEnd_toStartOf="@+id/fabLimpiar"
+        app:layout_constraintStart_toEndOf="@+id/fabAgregar"
+        app:layout_constraintTop_toBottomOf="@+id/editCosto" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="OnClick"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#4CAF50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCosto" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="130dp"
+        android:text="@string/Titulo"
+        android:textColor="#191970"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editBuscar"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/buscar"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="#FF4500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FF4500"
+        android:onClick="OnClick"
+        android:text="@string/buscar"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <TextView
+        android:id="@+id/txtMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/marca"
+        android:textColor="#191970"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtColores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCodigo" />
+
+    <EditText
+        android:id="@+id/editCodigo"
+        android:layout_width="130dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:hint="@string/codigo"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/editModelo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBuscar" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/gpoOpciones"
+        android:layout_width="133dp"
+        android:layout_height="162dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMarca">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chNike"
+            style="@style/chopSel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nike"
+            app:chipIcon="@drawable/baseline_directions_run_24" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chAdidas"
+            style="@style/chopSel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/adidas"
+            app:chipIcon="@drawable/baseline_directions_run_24" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chPuma"
+            style="@style/chopSel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/puma"
+            app:chipIcon="@drawable/baseline_directions_run_24" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/txtColores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:text="@string/colores"
+        android:textColor="#191970"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editModelo" />
+
+    <RadioGroup
+        android:id="@+id/rgpOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTalla">
+
+        <RadioButton
+            android:id="@+id/rbtChica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chica"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/rbtMediana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mediana"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/rbtGrande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grande"
+            android:textColor="@color/black" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtTalla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="130dp"
+        android:text="@string/talla"
+        android:textColor="#191970"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpoOpciones" />
+
+    <EditText
+        android:id="@+id/editCosto"
+        android:layout_width="155dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="130dp"
+        android:ems="10"
+        android:hint="@string/costo"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgpOpciones" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:onClick="OnClick"
+        app:backgroundTint="#FF4500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCosto"
+        app:srcCompat="@drawable/baseline_clear_all_24" />
+
+    <CheckBox
+        android:id="@+id/chbNegro"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="38dp"
+        android:text="@string/negro"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/chbRojo"
+        app:layout_constraintStart_toEndOf="@+id/gpoOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/txtColores" />
+
+    <CheckBox
+        android:id="@+id/chbRojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/rojo"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editModelo" />
+
+    <CheckBox
+        android:id="@+id/chbAzul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/azul"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chbRojo" />
+
+    <EditText
+        android:id="@+id/editModelo"
+        android:layout_width="132dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/modelo"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscar" />
+
+    <CheckBox
+        android:id="@+id/chbBlanco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/blanco"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/chbAzul"
+        app:layout_constraintStart_toEndOf="@+id/gpoOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/chbNegro" />
+
+    <CheckBox
+        android:id="@+id/chbNaranja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="71dp"
+        android:text="@string/naranja"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gpoOpciones"
+        app:layout_constraintTop_toBottomOf="@+id/chbAzul" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
